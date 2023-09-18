@@ -21,26 +21,34 @@
           <span v-if="status">清晰</span>
           <span v-else>模糊</span>
         </div>
+        <!-- 大頭貼清晰度切換 -->
         <div class="row">
           <div class="col-md-4 mb-3" v-for="item in data">
             <div class="card h-100">
               <div class="position-absolute" style="top: 20px; right: 20px">
+                <!-- 愛心btn -->
                 <button type="button" class="btn btn-outline-danger rounded-pill"
                   @click="item.favorite = true">
                   <i class="bi bi-heart fs-5" v-if="!item.favorite"></i>
                   <i class="bi bi-heart-fill fs-5" v-else></i>
                 </button>
+                <!-- 愛心btn -->
               </div>
+              <!-- 大頭貼清晰度切換 -->
               <img v-if="status" :src="item.picture.large" class="card-img-top">
               <img v-else :src="item.picture.thumbnail" class="card-img-top">
+              <!-- 大頭貼清晰度切換 -->
               <div class="card-body">
                 <h5 class="card-title">
+                  <!-- 姓名、性別icon -->
                   {{ item.name.title }} {{ item.name.first }} {{ item.name.last }}(
                   <span v-if="item.gender === 'male'">👨</span>
                   <span v-else>👩</span>
                   )
                 </h5>
-                <p class="card-text">Email：<a :href="`mailto:${item.email}`">{{ item.email }}</a></p>
+                <!-- 信箱 -->
+                <p class="card-text">Email：
+                  <a :href="`mailto:${item.email}`">{{ item.email }}</a></p>
                 <p class="card-text">Phone: <a :href="`tel:${item.phone}`">{{ item.phone }}</a></p>
                 <p class="card-text">Cell: <a :href="`tel:${item.cell}`">{{ item.cell }}</a></p>
                 <p class="card-text">City: {{ item.location.city }}</p>
