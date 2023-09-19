@@ -82,13 +82,17 @@
                   <a :href="`mailto:${item.email}`"
                     >{{item.email}}</a>
                 </p>
+                <!-- 電話 -->
                 <p class="card-text">
-                  Phone: <a href="tel:077 857 10 09">077 857 10 09</a>
+                  Phone: <a :href=`tel:${item.phone}`>{{item.phone}}</a>
                 </p>
+                <!-- 手機 -->
                 <p class="card-text">
-                  Cell: <a href="tel:075 491 99 85">075 491 99 85</a>
+                  Cell: <a :href=`tel:${item.cell}`>{{item.cell}}</a>
                 </p>
-                <p class="card-text">City: Châtillon (Ju)</p>
+                <hr>
+                <!-- 城市 -->
+                <p class="card-text">City:{{item.location.city}}</p>
                 <p class="card-text">State: Graubünden</p>
                 <p class="card-text">Country: Switzerland</p>
                 <p class="card-text">Postcode: 6560</p>

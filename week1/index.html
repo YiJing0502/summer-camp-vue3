@@ -48,9 +48,13 @@
                 </h5>
                 <!-- 信箱 -->
                 <p class="card-text">Email：
-                  <a :href="`mailto:${item.email}`">{{ item.email }}</a></p>
+                  <a :href="`mailto:${item.email}`">{{ item.email }}</a>
+                </p>
+                <!-- 電話 -->
                 <p class="card-text">Phone: <a :href="`tel:${item.phone}`">{{ item.phone }}</a></p>
+                <!-- 手機 -->
                 <p class="card-text">Cell: <a :href="`tel:${item.cell}`">{{ item.cell }}</a></p>
+                <!-- 城市 -->
                 <p class="card-text">City: {{ item.location.city }}</p>
                 <p class="card-text">State: {{ item.location.state }}</p>
                 <p class="card-text">Country: {{ item.location.country }}</p>
